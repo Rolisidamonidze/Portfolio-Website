@@ -1,0 +1,273 @@
+@font-face {
+  font-family: extrasquare_mtavruli;
+  src: url(bpg_extrasquare_mtavruli_2009.ttf);
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: extrasquare_mtavruli;
+}
+body {
+  display: flex;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  width: 95%;
+}
+#navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(13, 18, 23);
+  width: 5%;
+  align-items: center;
+}
+#navbar svg {
+  color: #f7f4e9;
+  font-size: 22px;
+  margin: 20px 0 10px 0;
+}
+#navbar svg:hover {
+  color: #19b5fe;
+}
+.banner {
+  color: #fff;
+  width: 100%;
+  height: auto;
+  background-image: url("background.jpg");
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: overlay;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  flex-direction: column;
+  height: 500px;
+}
+@keyframes showUp {
+  0% {
+    opacity: 0;
+    margin-top: 60px;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+.banner > * {
+  animation: 1s ease-in 0s 1 showUp;
+}
+.banner h1 {
+  font-size: 4em;
+  margin-bottom: 0.5em;
+}
+.banner p {
+  margin-bottom: 1.75em;
+  font-size: 1.5em;
+}
+.banner a {
+  padding: 15px 20px 15px 20px;
+  margin-bottom: 1.75em;
+  font-size: 1.35em;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 500ms ease-in-out;
+}
+.banner a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* gallery*/
+.gallery {
+  background-color: #f1f1f1;
+  flex-direction: column;
+  padding: 4em;
+  flex-wrap: wrap;
+}
+.content {
+  flex-wrap: wrap;
+}
+.content div {
+  width: 280px;
+  height: 180px;
+  overflow: hidden;
+  margin: 10px;
+  border-radius: 5px;
+}
+.content div img {
+  width: 100%;
+  height: 100%;
+}
+.content div img:hover {
+  transition: transform 0.5s ease-in-out;
+  transform: scale(1.1);
+}
+header h2 {
+  margin-bottom: 50px;
+}
+.full_gallery {
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 30px 15px 30px;
+  background-color: #19b5fe;
+  border-radius: 3px;
+}
+.full_gallery:hover {
+  background-color: #019be3;
+}
+.gallery_bottom {
+  margin-top: 60px;
+}
+/* contact */
+.info {
+  background-color: #ebe5e5;
+}
+.contact {
+  padding: 4em;
+  width: 50%;
+  height: 100%;
+}
+.about {
+  background-color: #dfd9d9;
+  padding: 4em;
+  width: 50%;
+}
+.about p {
+  padding: 15px 0;
+  color: #727272;
+}
+.about > * {
+  margin-bottom: 30px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+form h3 {
+  margin-bottom: 20px;
+}
+input {
+  border-radius: 5px;
+  margin-right: 20px;
+  outline: none;
+  border: solid 1px rgba(25, 181, 254, 0.25);
+  width: 200px;
+  height: 30px;
+  padding: 10px;
+}
+label {
+  margin: 15px 0 15px 0;
+}
+input:focus {
+  border: solid 1px rgba(25, 181, 254, 1);
+}
+.inputs {
+  display: flex;
+}
+textarea {
+  border-radius: 5px;
+  border: solid 1px rgba(25, 181, 254, 0.25);
+  outline: none;
+  padding: 1em;
+}
+textarea:focus {
+  border: solid 1px rgba(25, 181, 254, 1);
+}
+.name,
+.email {
+  display: flex;
+  flex-direction: column;
+}
+textarea::placeholder,
+input::placeholder {
+  color: #e9dae5;
+}
+.submit_btn {
+  margin-top: 40px;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  color: #fff;
+  /* padding: 15px 30px 15px 30px; */
+  background-color: #19b5fe;
+  border-radius: 3px;
+  width: 120px;
+  height: 40px;
+}
+
+.social svg {
+  font-size: 30px;
+  color: #19b5fe;
+}
+.social a {
+  margin-right: 15px;
+}
+.footer {
+  height: 120px;
+  background-color: #f2f2f2;
+}
+.footer a {
+  text-decoration: none;
+  color: #727272;
+}
+.footer a:hover {
+  color: #504e4e;
+}
+
+/* responsive */
+
+@media screen and (max-width: 1080px){
+  .inputs{
+    flex-wrap: wrap;
+  }
+  .about{
+    padding: 1em;
+  }
+  .contact{
+    padding: 1em;
+  }
+}
+@media screen and (max-width: 600px){
+  .main{
+    width: 90%;
+  }
+  #navbar{
+    width: 10%;
+  }
+}
+@media screen and (max-width: 560px){
+  .info{
+    flex-direction: column;
+  }
+  .about{
+    width: 100%;
+  }
+  .contact{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 460px){
+  .content div{
+    width: auto;
+    height: auto;
+  }
+  .banner h1{
+    font-size: 3em;
+  }
+  .gallery{
+    padding: 1em;
+  }
+  .full_gallery{
+    padding: 5px 10px 5px 10px;
+  }
+}
