@@ -98,8 +98,8 @@ body {
   flex-wrap: wrap;
 }
 .content div {
-  width: 280px;
-  height: 180px;
+  max-width: 280px;
+  height: 150px;
   overflow: hidden;
   margin: 10px;
   border-radius: 5px;
